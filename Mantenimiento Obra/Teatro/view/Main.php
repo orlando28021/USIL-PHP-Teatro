@@ -5,7 +5,10 @@ require_once '../control/ObraControl.php';
 abstract class Main {
 
     public static function run() {
+        
+        
         $opcion = isset($_POST['opcion']) ? $_POST['opcion'] : null;
+        if($opcion!=null){
         switch ($opcion) {
             case "insert_obra":
                 $id = null;
@@ -29,6 +32,8 @@ abstract class Main {
                         && ($_FILES['afiche']['type'] < 20000)) {
                     if (move_uploaded_file($_FILES['afiche']['tmp_name'], $target_path)) {
                         ObraControl::insert($id, $nombre, $autor, $director, $actores, $sala, $precio, $temporada, $afiche, $resena);
+                        header('location:Main.php');
+
                     } else {
                         echo "Error";
                     }
@@ -37,13 +42,30 @@ abstract class Main {
                 break;
 
             default:
+                self::_showObras(ObraControl::getAll());
                 break;
-        }
+        }}
+        else{
+            $op = isset($_GET['op']) ? $_GET['op'] : null;
+        echo $op;
         
-        self::_verObras(ObraControl::getAll());
-    }
+          switch ($op) {
+            case "a":
+                self::_addObras();
+                break;
+            default :
+                self::_showObras(ObraControl::getAll());
+                break;
 
-    private static function _verObras($obras) {
+                }
+        
+        
+    }
+    }
+    private static function _showObras($obras) {
+        require_once 'html/ObraMantenimiento.html';
+    }
+     private static function _addObras() {
         require_once 'html/ObraNuevo.html';
     }
 
