@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Obras - Nuevo</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <div id="header">
+            <div id="container">
+                <br />
+                <br/>
+                <h1>Teatro o nose que</h1>
+            </div>
+        </div>
+        <div id="container">
+            <div id="menu">
+                <ul class="dropdown">
+                    <li><a href="#">Opcion 1</a>
+                        <ul class="sub_menu">
+                            <li><a href="#">Opcion 1.1</a></li>
+                            <li>
+                                <a href="#">Opcion 1.2</a>
+                                <ul>
+                                    <li><a href="#">Opcion 1.2.1</a></li>
+                                    <li><a href="#">Opcion 1.2.2</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Opcion 1.3</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">Opcion 2</a>
+                        <ul class="sub_menu">
+                            <li><a href="#">Opcion 2.1</a></li>
+                            <li><a href="#">Opcion 2.2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Opcion 3</a>
+                        <ul class="sub_menu">
+                            <li>
+                                <a href="#">Opcion 3.1</a>
+                                <ul>
+                                    <li><a href="#">Opcion 3.1.1</a></li>
+                                    <li><a href="#">Opcion 3.1.2</a></li>
+                                    <li><a href="#">Opcion 3.1.3</a></li>
+                                    <li><a href="#">Opcion 3.1.4</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Opcion 3.2</a>
+                            </li>
+                            <li>
+                                <a href="#">Opcion 3.3</a>
+                                <ul>
+                                    <li><a href="#">Opcion 3.3.1</a></li>
+                                    <li><a href="#">Opcion 3.3.2</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Opcion 3.4</a>
+                            </li>
+
+                            <li><a href="#">Opcion 3.5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">...</a>
+                        <ul class="sub_menu">
+                            <li><a href="#">....</a></li>
+                            <li><a href="#">,,,,</a></li>
+                            <li><a href="#">////</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="wrapper">
+                <h1>Obra Nueva</h1>
+                <form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+                    <br/>
+                    <table id="tableAdd">
+                        <tr>
+                            <td>Nombre</td>
+                            <td><input type="text" name="nombre"/></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Autor</td>
+                            <td><input type="text" name="autor"/></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Director</td>
+                            <td><input type="text" name="director"/></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Actores</td>
+                            <td><textarea name="actores"></textarea></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Sala</td>
+                            <td><input type="text" name="sala"/></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Precio</td>
+                            <td><input type="text" name="precio"/></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Temporada</td>
+                            <td><input type="text" name="temporada"/></td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Afiche</td>
+                            <td>        <input type="file" name="afiche" />
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>Reseña</td>
+                            <td><textarea name="resena"></textarea></td>
+                            
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <table  >
+                                <tr>
+                                  <td id="options" ><a href="Main.php"><img src="images/back.png" width="32" height="32" alt="Volver" title="Volver"/></a></td>
+                                  <td id="options""><a href="Main.php?op=a"><img src="images/eraser.png" width="32" height="32" alt="Borrar" title="Borrar"/></a></td>
+                                  <td id="options"><input type="submit" name="button" id="buttonAdd" value="" title="Agregar"/></td>
+                      
+                                </tr>
+                            </table>
+                                </td>
+                              </tr>
+                    </table>
+                    <input type="hidden" name="opcion"  value="insert_obra" />
+                </form>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br /><br />
+                
+            </div>
+            <div id="footer"></div>
+        </div>
+    </body>
+</html>
