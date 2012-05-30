@@ -1,1 +1,4 @@
-header("location:view/view.php");
+<?php
+header('location:View/Main.php');
+
+?>

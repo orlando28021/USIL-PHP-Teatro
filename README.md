@@ -8,4 +8,3 @@ Integrantes:
 -Diego Abanto Arroyo
 -Orlando Alfaro Fernandez
 -Rodolfo Gamarra Durand
--Giovanni Carlos Jimenez Leon 
