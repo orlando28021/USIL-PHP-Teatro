@@ -43,6 +43,8 @@ CREATE  TABLE IF NOT EXISTS `teatrodb`.`Usuarios` (
   `apellido` VARCHAR(45) NOT NULL ,
   `correo` VARCHAR(45) NOT NULL ,
   `password` VARCHAR(45) NOT NULL ,
+  `twitter_cuenta` VARCHAR(45) NOT NULL ,
+  `twitter_token` VARCHAR(100) NOT NULL ,
   PRIMARY KEY (`idUsuario`) )
 ENGINE = InnoDB;
 
