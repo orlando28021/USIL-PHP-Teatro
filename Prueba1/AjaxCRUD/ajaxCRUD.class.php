@@ -12,7 +12,7 @@
 	/* the Free Software Foundation; either version 2 of the License.       */
 	/************************************************************************/
 	# thanks to the following for help on v6.0:
-	# Mariano Montañez Ureta, from Argentina; twitter: @nanomo
+	# Mariano Montaï¿½ez Ureta, from Argentina; twitter: @nanomo
 	# Jing Ling, New Hampshire
 
 	define('EXECUTING_SCRIPT', $_SERVER['PHP_SELF']);
@@ -333,7 +333,7 @@ class ajaxCRUD{
 
         $this->doActionOnShowTable = true;
 
-        $this->loading_image_html = "<center><br /><br  /><img src=\'" . $this->ajaxcrud_root . "css/loading.gif\'><br /><br /></center>"; //changed via setLoadingImageHTML()
+      //  $this->loading_image_html = "<center><br /><br  /><img src=\'" . $this->ajaxcrud_root . "css/loading.gif\'><br /><br /></center>"; //changed via setLoadingImageHTML()
         $this->emptyTableMessage = "No data in this table. Click add button below.";
 
         $this->onAddExecuteCallBackFunction         = '';
