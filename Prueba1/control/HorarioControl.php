@@ -18,8 +18,7 @@ class HorarioControl {
 
         
         $tblHorario->addAjaxFilterBox("fecha");
-        
-        
+
         $tblHorario->showTable();
     }
 }

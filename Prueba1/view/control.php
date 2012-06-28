@@ -15,8 +15,8 @@ class control {
         
         $option = null;
         if($option == null){
-            $votos->MantenimientoVotos();
-            $this->_ejecutarVotos($votos);
+            $horario->MantenimientoHorario();
+            $this->_ejecutarHorario($horario);
         }
     }
     

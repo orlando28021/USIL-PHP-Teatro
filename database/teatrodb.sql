@@ -17,7 +17,7 @@ CREATE  TABLE IF NOT EXISTS `teatrodb`.`Obras` (
   `sala` INT NOT NULL ,
   `precio` FLOAT NOT NULL ,
   `temporada` YEAR NOT NULL ,
-  `afiche` LONGBLOB NOT NULL ,
+  `afiche` TEXT NOT NULL ,
   `reseña` VARCHAR(150) NOT NULL ,
   PRIMARY KEY (`idObra`) )
 ENGINE = InnoDB;

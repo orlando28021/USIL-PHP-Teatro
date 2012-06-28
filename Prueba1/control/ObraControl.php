@@ -18,14 +18,18 @@ class ObraControl {
         $tblObra->displayAs("director", "Director");
         $tblObra->displayAs("actores", "Actores");
         $tblObra->displayAs("sala", "Sala");
+        $tblObra->displayAs("precio", "Precio");
         $tblObra->displayAs("temporada", "Temporada");
         $tblObra->displayAs("afiche", "Afiche");
         $tblObra->displayAs("reseña", "Reseña");
         
         $tblObra->addAjaxFilterBox("nombre");
         
+        $tblObra->setFileUpload("afiche", "../Afiches/", "../Afiches/");
         
         $tblObra->showTable();
+        
+
     }
 }
 
