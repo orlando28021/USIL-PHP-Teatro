@@ -15,8 +15,8 @@ class control {
         
         $option = null;
         if($option == null){
-            $horario->MantenimientoHorario();
-            $this->_ejecutarHorario($horario);
+            $usuario->MantenimientoUsuario();
+            $this->_ejecutarUsuario($usuario);
         }
     }
     
@@ -39,9 +39,7 @@ class control {
     private function _ejecutarVotos($votos){
         require_once 'usuarioHTML.html';
     }
-    
-    
-    
+     
 }
 
 $view = new control();

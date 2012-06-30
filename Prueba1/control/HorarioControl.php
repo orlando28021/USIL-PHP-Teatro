@@ -16,11 +16,18 @@ class HorarioControl {
         $tblHorario->displayAs("fecha", "Fecha");
         $tblHorario->displayAs("hora", "Hora");
 
+        $tblHorario->modifyFieldWithClass("fecha", "datepicker");
+        $tblHorario->modifyFieldWithClass("hora", "timepicker");
+        
+
         
         $tblHorario->addAjaxFilterBox("fecha");
 
         $tblHorario->showTable();
+                
     }
+    
+
 }
 
 ?>

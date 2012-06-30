@@ -388,8 +388,27 @@ class ajaxCRUD{
 	function setAjaxFile($ajax_file){
         $this->ajax_file = $ajax_file;
     }
+    
+  /*  //FUNCIONES PROPIAS
+    function encryptPassword($user, $clave, $token){
+        $ID = $array[id]; //specific id for every user
+        
+        $existe = qr("SELECT nombre FROM usuarios WHERE $user ")
+        
+        if()
+        
+        $passwordEncrypted = md5($array[password]); //password to encrypt
+        $updateVal = 'Yes';
+        
+        
 
-	function setOrientation($orientation){
+        if ($updateVal == 'Yes'){
+            $success = qr("UPDATE users SET password = \"$passwordEncrypted\" WHERE id = $ID");
+        }
+    }*/
+    
+
+    function setOrientation($orientation){
         $this->orientation = $orientation;
     }
 
@@ -684,17 +703,22 @@ class ajaxCRUD{
         }
 
 		/* Load Javascript dependencies */
-		if ($this->includeJQuery){
-			//echo "<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></script>\n"; 				//rel 3.5 - using jquery instead of protoculous
+		//if ($this->includeJQuery){
+		echo "<script type=\"text/javascript\" src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js\"></script>\n"; 				//rel 3.5 - using jquery instead of protoculous
     		echo "<script type=\"text/javascript\" src=\"http://code.jquery.com/jquery-latest.min.js\"></script>\n"; 									//rel 6 - using latest version of jquery from jquery site (http://docs.jquery.com/Plugins/Validation/Validator)
     		echo "<script type=\"text/javascript\" src=\"http://ajax.aspnetcdn.com/ajax/jquery.validate/1.7/jquery.validate.min.js\"></script>\n"; 		//rel 6 - added ability to validate forms fields
-			echo "<script type=\"text/javascript\" src=\"http://ajaxcrud.com/code/jquery.maskedinput.js\"></script>\n"; 								//rel 6 - ability to mask fields (http://digitalbush.com/projects/masked-input-plugin/)
-			echo "<script src=\"" . $this->ajaxcrud_root . "validation.js\" type=\"text/javascript\"></script>\n";
-		}
-        echo "<script src=\"" . $this->ajaxcrud_root . "javascript_functions.js\" type=\"text/javascript\"></script>\n";
-        echo "<link href=\"" . $this->ajaxcrud_root . "css/default.css\" rel=\"stylesheet\" type=\"text/css\" media=\"screen\" />\n";
-
-        echo "
+		echo "<script type=\"text/javascript\" src=\"http://ajaxcrud.com/code/jquery.maskedinput.js\"></script>\n"; 								//rel 6 - ability to mask fields (http://digitalbush.com/projects/masked-input-plugin/)
+		//}
+        
+       /* echo "  <link href="../AjaxCRUD/css/default.css" rel="stylesheet" type="text/css" media="screen"/> ";
+        echo "  <link href="../AjaxCRUD/examples/includes/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" /> ";
+            
+       echo "   <script src="../AjaxCRUD/validation.js" ></script> ";
+       echo "   <script src="../AjaxCRUD/examples/includes/jquery.ui.core.js" > </script> ";
+       echo "   <script src="../AjaxCRUD/examples/includes/jquery.ui.datepicker.js" ></script> ";*/
+       
+       
+       echo "
             <script>\n
                 ajax_file = \"$this->ajax_file\"; \n
                 this_page = \"" . $_SERVER['REQUEST_URI'] . "\"\n
@@ -2169,6 +2193,8 @@ class paging{
 		//$extra_query_params = "&Dealer=" . htmlentities($_REQUEST['Dealer']);
 		return "pageTable('" . $extra_query_params . "$paging_query_string', '$this->tableName');";
 	}
+        
+        
 
 }
 
